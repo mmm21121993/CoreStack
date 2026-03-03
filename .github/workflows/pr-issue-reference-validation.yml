@@ -3,6 +3,9 @@ name: PR Issue Reference Validation
 on:
   pull_request:
     types: [opened, edited, synchronize, reopened]
+  push:
+    branches:
+      - dev
 
 jobs:
   validate-pr-description:
