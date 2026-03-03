@@ -1,0 +1,12 @@
+<Project>
+  <PropertyGroup>
+    <AnalysisLevel>latest</AnalysisLevel>
+    <Deterministic>true</Deterministic>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+</Project>
