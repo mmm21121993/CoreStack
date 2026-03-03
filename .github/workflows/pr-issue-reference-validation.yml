@@ -1,0 +1,25 @@
+name: PR Issue Reference Validation
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+jobs:
+  validate-pr-description:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Validate PR contains issue reference
+        run: |
+          PR_BODY="${{ github.event.pull_request.body }}"
+          echo "Checking PR description..."
+
+          if [[ ! "$PR_BODY" =~ Closes\ #[0-9]+ ]]; then
+            echo "❌ PR must contain: Closes #<issue-number>"
+            echo ""
+            echo "Example:"
+            echo "Closes #1"
+            exit 1
+          fi
+
+          echo "✅ PR references an issue correctly."

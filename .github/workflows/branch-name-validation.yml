@@ -1,0 +1,29 @@
+name: Branch Name Validation
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+jobs:
+  validate-branch-name:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Validate branch name format
+        run: |
+          BRANCH_NAME="${{ github.head_ref }}"
+          echo "Validating branch: $BRANCH_NAME"
+
+          if [[ ! "$BRANCH_NAME" =~ ^(feature|bug|fix|refactor|hotfix|chore)/[0-9]+-[a-z0-9-]+$ ]]; then
+            echo "❌ Invalid branch name."
+            echo ""
+            echo "Required format:"
+            echo "  <type>/<issue-number>-short-description"
+            echo ""
+            echo "Example:"
+            echo "  chore/1-add-branch-policy"
+            echo "  feature/12-add-auth-layer"
+            exit 1
+          fi
+
+          echo "✅ Branch name format is valid."
