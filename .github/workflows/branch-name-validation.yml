@@ -12,7 +12,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Skip validation on push
+        if: github.event_name == 'push'
+        run: echo "Push event - skipping branch name validation."
+  
       - name: Validate branch name format
+        if: github.event_name == 'pull_request'
         run: |
           BRANCH_NAME="${{ github.head_ref }}"
           echo "Validating branch: $BRANCH_NAME"
