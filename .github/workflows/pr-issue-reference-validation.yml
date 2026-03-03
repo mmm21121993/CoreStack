@@ -12,7 +12,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Skip validation on push
+        if: github.event_name == 'push'
+        run: echo "Push event - skipping PR validation."
+  
       - name: Validate PR contains issue reference
+        if: github.event_name == 'pull_request'
         run: |
           PR_BODY="${{ github.event.pull_request.body }}"
           echo "Checking PR description..."
