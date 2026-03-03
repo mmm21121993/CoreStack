@@ -1,0 +1,17 @@
+<Solution>
+  <Folder Name="/Abstraction/">
+    <Project Path="src/CoreStack.Abstraction/CoreStack.Abstraction.csproj" Id="5610caf6-c7be-44f9-88d6-ead767c2e240" />
+  </Folder>
+  <Folder Name="/Application/">
+    <Project Path="src/CoreStack.Application/CoreStack.Application.csproj" Id="fe44667e-1f23-4dc8-b7ce-004beece2c60" />
+  </Folder>
+  <Folder Name="/Domain/">
+    <Project Path="src/CoreStack.Domain/CoreStack.Domain.csproj" Id="40e6797f-763e-488e-b24c-f4aae09834d6" />
+  </Folder>
+  <Folder Name="/Infrastructure/">
+    <Project Path="src/CoreStack.Infrastructure/CoreStack.Infrastructure.csproj" Id="9d9ce71b-ca2f-44cb-a9f8-41ac06feb3be" />
+  </Folder>
+  <Folder Name="/Presentation/">
+    <Project Path="src/CoreStack.Api/CoreStack.Api.csproj" Id="539f0633-d326-4b2b-88ba-7f59cdc39941" />
+  </Folder>
+</Solution>
