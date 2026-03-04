@@ -1,10 +1,11 @@
 <Project>
-  <PropertyGroup>
-    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
-    <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
-  </PropertyGroup>
+    <PropertyGroup>
+        <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+        <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="10.0.3" />
-  </ItemGroup>
+    <ItemGroup>
+        <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="10.0.3" />
+        <PackageVersion Include="StyleCop.Analyzers" Version="1.1.118" />
+    </ItemGroup>
 </Project>
