@@ -14,4 +14,8 @@
   <Folder Name="/Presentation/">
     <Project Path="src/CoreStack.Api/CoreStack.Api.csproj" Id="539f0633-d326-4b2b-88ba-7f59cdc39941" />
   </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+  </Folder>
 </Solution>
