@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\CoreStack.Abstraction\CoreStack.Abstraction.csproj" />
     <ProjectReference Include="..\CoreStack.Domain\CoreStack.Domain.csproj" />
   </ItemGroup>
