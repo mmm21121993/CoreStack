@@ -19,4 +19,7 @@
     <File Path="Directory.Build.props" />
     <File Path="Directory.Packages.props" />
   </Folder>
+  <Folder Name="/Test/">
+    <Project Path="tests/CoreStack.Architecture.Tests/CoreStack.Architecture.Tests.csproj" Id="3d3f0aa5-3678-4ab9-80ae-7856b4c8d0fb" />
+  </Folder>
 </Solution>

@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="NetArchTest.Rules" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio" PrivateAssets="all" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\CoreStack.Abstraction\CoreStack.Abstraction.csproj" />
+    <ProjectReference Include="..\..\src\CoreStack.Api\CoreStack.Api.csproj" />
+    <ProjectReference Include="..\..\src\CoreStack.Application\CoreStack.Application.csproj" />
+    <ProjectReference Include="..\..\src\CoreStack.Domain\CoreStack.Domain.csproj" />
+    <ProjectReference Include="..\..\src\CoreStack.Infrastructure\CoreStack.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
