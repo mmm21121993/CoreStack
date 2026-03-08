@@ -10,6 +10,7 @@ end_of_line = lf
 insert_final_newline = true
 indent_style = space
 indent_size = 4
+tab_width = 4
 trim_trailing_whitespace = true
 
 ########################################
@@ -19,12 +20,19 @@ trim_trailing_whitespace = true
 [*.cs]
 
 ############################
+# USING PLACEMENT
+############################
+
+csharp_using_directive_placement = outside_namespace:error
+
+############################
 # USING ORDER
 ############################
 
 dotnet_sort_system_directives_first = true:error
 dotnet_separate_import_directive_groups = true:error
 dotnet_diagnostic.IDE0005.severity = error
+dotnet_diagnostic.IDE0065.severity = error
 
 ############################
 # ACCESSIBILITY
@@ -164,6 +172,8 @@ dotnet_diagnostic.SA0001.severity = none
 dotnet_diagnostic.SA1600.severity = none
 dotnet_diagnostic.SA1633.severity = none
 dotnet_diagnostic.SA1309.severity = none
+dotnet_diagnostic.SA1200.severity = none
+dotnet_diagnostic.SA1010.severity = none
 
 ########################################
 # DISABLED RULES
@@ -171,6 +181,7 @@ dotnet_diagnostic.SA1309.severity = none
 
 dotnet_diagnostic.IDE0160.severity = none
 dotnet_diagnostic.IDE0290.severity = none
+dotnet_diagnostic.IDE0055.severity = none
 dotnet_diagnostic.SYSLIB1045.severity = none
 
 ########################################
