@@ -11,6 +11,11 @@ namespace CoreStack.Abstraction.Constants.Api;
 public static class ApiNames
 {
     /// <summary>
+    /// Represents the unknown API operation as a fallback.
+    /// </summary>
+    public const string Unknown = "Unknown";
+
+    /// <summary>
     /// Represents the health probe API operation.
     /// </summary>
     public const string HealthProbe = "HealthProbe";
