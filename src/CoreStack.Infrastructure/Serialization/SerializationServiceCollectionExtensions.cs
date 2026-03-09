@@ -26,10 +26,9 @@ internal static class SerializationServiceCollectionExtensions
     public static IServiceCollection AddSerialization(
         this IServiceCollection services)
     {
-        services.Configure<JsonSerializerOptions>(
-            JsonSerializerDefaults.Configure);
+        services.Configure<JsonSerializerOptions>(JsonSerializerDefaults.Configure);
 
-        services.AddScoped<ISerializationService, SerializationService>();
+        services.AddSingleton<ISerializationService, SerializationService>();
 
         return services;
     }
