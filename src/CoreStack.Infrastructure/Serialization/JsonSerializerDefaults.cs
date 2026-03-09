@@ -17,23 +17,29 @@ public static class JsonSerializerDefaults
     /// <summary>
     /// Defines an action used to configure JSON serializer options.
     /// </summary>
-    public static readonly Action<JsonSerializerOptions> Configure =
-        (options) =>
+    public static readonly Action<JsonSerializerOptions> Configure = static options =>
+    {
+        options.WriteIndented = false;
+
+        if (!SerializationDefaults.IgnoreNullValues)
         {
-            options.WriteIndented = false;
             options.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
+        }
 
-            options.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
-            options.DictionaryKeyPolicy = JsonNamingPolicy.CamelCase;
+        options.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
+        options.DictionaryKeyPolicy = JsonNamingPolicy.CamelCase;
 
-            options.Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping;
+        options.PropertyNameCaseInsensitive = SerializationDefaults.IsCaseInsensitive;
 
-            options.PropertyNameCaseInsensitive = true;
+        options.MaxDepth = SerializationDefaults.MaxDepth;
 
-            options.MaxDepth = 32;
+        options.NumberHandling = JsonNumberHandling.AllowReadingFromString;
 
-            options.NumberHandling = JsonNumberHandling.AllowReadingFromString;
+        options.Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping;
 
+        if (!options.Converters.Any(c => c is JsonStringEnumConverter))
+        {
             options.Converters.Add(new JsonStringEnumConverter(JsonNamingPolicy.CamelCase));
-        };
+        }
+    };
 }
