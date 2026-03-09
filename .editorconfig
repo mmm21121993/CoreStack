@@ -185,6 +185,7 @@ dotnet_diagnostic.IDE0160.severity = none
 dotnet_diagnostic.IDE0290.severity = none
 dotnet_diagnostic.IDE0055.severity = none
 dotnet_diagnostic.SYSLIB1045.severity = none
+dotnet_diagnostic.CA1859.severity = none
 
 ########################################
 # PROJECT FILES
