@@ -31,6 +31,8 @@ internal sealed class SerializationService
     public SerializationService(
         IOptions<JsonSerializerOptions> jsonSerializerOptions)
     {
+        ArgumentNullException.ThrowIfNull(jsonSerializerOptions);
+
         _serializerOptions = jsonSerializerOptions.Value;
     }
 
