@@ -1,3 +1,4 @@
+using CoreStack.Infrastructure.Sanitization;
 using CoreStack.Infrastructure.Serialization;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -26,6 +27,8 @@ public static class InfrastructureServiceCollectionExtensions
         this IServiceCollection services)
     {
         services.AddSerialization();
+
+        services.AddSanitization();
 
         return services;
     }
